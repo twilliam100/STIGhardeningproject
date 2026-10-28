@@ -55,29 +55,17 @@ Every scan covered 278 rules, including 52 Not Applicable (mostly domain control
 ## Repository contents
 
 ```
-README.md                           This summary
-POAM.md                             Plan of Action and Milestones for the 9 open findings
+README.md                 This summary
+POAM.md                   Plan of Action and Milestones for the 9 open findings
 scripts/
-  WS2022_STIG.ps1                   PowerSTIG DSC configuration used for bulk remediation
-  STIGEvidence.ps1                  Read-only evidence collection for the manual checks
+  WS2022_STIG.ps1         PowerSTIG DSC configuration used for bulk remediation
+  STIGEvidence.ps1        Read-only evidence collection for the manual checks
 evidence/
-  final-checklist-stig-viewer.cklb  Final STIG Viewer checklist: 208 NaF, 61 NA, 9 Open (sanitized)
+  manual-evidence.txt     Output of STIGEvidence.ps1 (sanitized)
+  *.cklb                  Final STIG Viewer checklist (sanitized)
 reports/
-  SCC All-Settings HTML reports     One per scan, Oct 14 to Oct 19 (sanitized)
+  SCC HTML reports        Baseline and final scan reports (sanitized)
 ```
-
-SCC reports in `reports/`, by scan timestamp:
-
-| Scan | Score | Stage |
-| --- | --- | --- |
-| 2026-10-14_084722 | 49.02% | After CAT I fixes |
-| 2026-10-14_093107 | 93.14% | After PowerSTIG |
-| 2026-10-14_100222 | 93.14% | Rescan to confirm |
-| 2026-10-19_055505, 060644 | 97.06% | Manual fixes in progress |
-| 2026-10-19_062714, 064211 | 97.55% | Manual fixes in progress |
-| 2026-10-19_064908 | 99.02% | Final automated scan |
-
-The 44.61% baseline HTML report was lost when a VM snapshot rollback removed the SCC install. The baseline score comes from the original scan results recorded at the time.
 
 ## Notes
 
